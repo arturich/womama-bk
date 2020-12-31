@@ -1,22 +1,17 @@
 import React from 'react';
+ //What switch does is that once it matches one path it does not load other.
 import {Switch, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/homepage/homepage.component';
+import ShopPage from "./pages/shop/shop.component";
 
-const DonasPage = () => (
-  <div>
-    <h1>
-       Donas Page
-    </h1>
-  </div>
-);
 
 function App() {
   return (
-    <div>
+    <div>     
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/donas" component={DonasPage} />
+        <Route path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
